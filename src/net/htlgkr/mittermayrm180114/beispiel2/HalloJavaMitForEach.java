@@ -5,19 +5,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class HalloJavaMitForEach
-{
-    public static void main(String[] args)
-    {
-        List<String> liste = new ArrayList<>(Arrays.asList("Apfel", "Orange", "Banane"));
+public class HalloJavaMitForEach {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>(Arrays.asList("Apfel", "Orange", "Banane"));
 
-        for (String s: liste)
-        {
+        for (String s : list) {
             System.out.println(s);
         }
 
-        liste.forEach((String s) -> System.out.println(s));
+        list.forEach((String s) -> System.out.println(s));
         Consumer<String> consumer = (String s) -> System.out.println(s);
-        liste.forEach(System.out:: print);
+        list.forEach(System.out::print);
     }
 }
